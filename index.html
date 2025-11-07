@@ -238,8 +238,30 @@
         const handle = widget.querySelector('.translate-label');
         let offsetX = 0, offsetY = 0, dragging = false;
 
+        // Prevenir que el combo box active el arrastre
+        function preventDragOnTranslator() {
+          const translateElement = document.getElementById('google_translate_element');
+          if (translateElement) {
+            translateElement.addEventListener('mousedown', e => {
+              e.stopPropagation();
+            }, true);
+            translateElement.addEventListener('touchstart', e => {
+              e.stopPropagation();
+            }, {passive: true, capture: true});
+          }
+        }
+
+        // Esperar a que Google Translate cargue y entonces aplicar la prevención
+        setTimeout(preventDragOnTranslator, 1000);
+        // Reintentar después de más tiempo por si Google Translate tarda en cargar
+        setTimeout(preventDragOnTranslator, 3000);
+
         // Mouse events
         handle.addEventListener('mousedown', e => {
+          // Verificar que el click sea específicamente en el handle, no en sus hijos
+          if (e.target.closest('#google_translate_element')) {
+            return; // No activar arrastre si se clickea en el traductor
+          }
           dragging = true;
           offsetX = e.clientX - widget.getBoundingClientRect().left;
           offsetY = e.clientY - widget.getBoundingClientRect().top;
@@ -258,6 +280,10 @@
 
         // Touch events
         handle.addEventListener('touchstart', e => {
+          // Verificar que el touch sea específicamente en el handle
+          if (e.target.closest('#google_translate_element')) {
+            return; // No activar arrastre si se toca el traductor
+          }
           const touch = e.touches[0];
           dragging = true;
           offsetX = touch.clientX - widget.getBoundingClientRect().left;
@@ -281,10 +307,10 @@
           const minY = 0;
           const maxX = window.innerWidth - widget.offsetWidth;
           const maxY = window.innerHeight - widget.offsetHeight;
-          
+
           const newX = Math.min(Math.max(x - offsetX, minX), maxX);
           const newY = Math.min(Math.max(y - offsetY, minY), maxY);
-          
+
           widget.style.left = newX + "px";
           widget.style.top = newY + "px";
           widget.style.right = "auto";
