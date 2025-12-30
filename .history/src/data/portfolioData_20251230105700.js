@@ -31,11 +31,9 @@ export const education = [
 export const skills = {
   backend: ["C#", ".NET", "Java", "Python", "C++", "C"],
   frontend: ["Windows Forms", "Processing"],
-  database: ["MySQL", "SQL Server", "Oracle", "SQLite", "Access", "MariaDB"],
-  methodologies: ["CRUD", "POO", "Ingeniería de Software", "UML", "Diagramas ER", "Normalización"],
-  tools: ["Visual Studio", "MatLab", "Excel Avanzado", "SpreadsheetLight"],
-  design: ["Blender", "Inkscape", "UML", "Diagramas ER", "Wireframes"],
-  administrative: ["Facturación Electrónica", "SAT", "Gestión de Inventarios", "Cotizaciones", "Análisis de Mercado"]
+  database: ["MySQL", "SQL Server", "Oracle", "SQLite", "Access"],
+  methodologies: ["UML", "CRUD", "POO", "Ingeniería de Software"],
+  tools: ["Visual Studio", "MatLab", "Blender", "Inkscape", "Excel Avanzado", "SpreadsheetLight"]
 };
 
 export const projects = [
@@ -80,39 +78,6 @@ export const projects = [
       "Análisis de datos",
       "Interfaz gráfica personalizada",
       "Procesamiento de información"
-    ]
-  },
-  {
-    id: 4,
-    title: "Análisis de Sistemas Empresariales - Lasec Telecomunicaciones",
-    description: "Proyecto de análisis y documentación de sistemas empresariales para el sector de telecomunicaciones, aplicando metodologías de ingeniería de software y generando documentación técnica completa.",
-    technologies: ["UML", "Diagramas ER", "Ingeniería de Software", "Análisis de Sistemas"],
-    features: [
-      "Análisis de sistemas empresariales complejos",
-      "Diseño de diagramas UML completos",
-      "Modelado de bases de datos con diagramas entidad-relación",
-      "Especificaciones funcionales detalladas",
-      "Documentación técnica para proyectos de telecomunicaciones",
-      "Aplicación de mejores prácticas del sector tecnológico",
-      "Colaboración en ambiente profesional"
-    ]
-  },
-  {
-    id: 5,
-    title: "Sistema de Gestión Comercial y Administrativa - MPC de México",
-    description: "Sistema integral para la gestión comercial, administrativa y de inventarios, incluyendo análisis de mercado, gestión de licitaciones y compliance fiscal.",
-    technologies: ["Excel Avanzado", "Sistemas de Gestión", "Business Intelligence", "Análisis de Datos"],
-    features: [
-      "Control y monitoreo de inventarios en tiempo real",
-      "Generación de cotizaciones y propuestas comerciales personalizadas",
-      "Análisis de mercado y tendencias competitivas",
-      "Comparación de precios con proveedores mayoristas",
-      "Monitoreo y análisis de licitaciones vigentes",
-      "Gestión de relaciones con proveedores",
-      "Compliance fiscal (SAT, IMSS, INFONAVIT)",
-      "Administración de facturación electrónica",
-      "Generación de remisiones y documentación comercial",
-      "Optimización de márgenes de rentabilidad"
     ]
   }
 ];

@@ -23,10 +23,10 @@ const Hero = () => {
             <a href={`mailto:${personalInfo.email}`} className={styles.socialLink}>
               <FaEnvelope />
             </a>
-            <a href="https://wa.me/5214331032736" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <a href="https://wa.me/52 1 433 103 2736" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               <FaWhatsapp />
             </a>
-            <a href="/SaliCV.pdf" download="Sali_CV.pdf" className={styles.socialLink}>
+            <a href="/andresCV.pdf" download="Andres_CV.pdf" className={styles.socialLink}>
               <FaDownload />
             </a>
           </div>

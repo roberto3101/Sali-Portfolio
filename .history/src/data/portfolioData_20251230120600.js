@@ -31,11 +31,9 @@ export const education = [
 export const skills = {
   backend: ["C#", ".NET", "Java", "Python", "C++", "C"],
   frontend: ["Windows Forms", "Processing"],
-  database: ["MySQL", "SQL Server", "Oracle", "SQLite", "Access", "MariaDB"],
-  methodologies: ["CRUD", "POO", "Ingeniería de Software", "UML", "Diagramas ER", "Normalización"],
-  tools: ["Visual Studio", "MatLab", "Excel Avanzado", "SpreadsheetLight"],
-  design: ["Blender", "Inkscape", "UML", "Diagramas ER", "Wireframes"],
-  administrative: ["Facturación Electrónica", "SAT", "Gestión de Inventarios", "Cotizaciones", "Análisis de Mercado"]
+  database: ["MySQL", "SQL Server", "Oracle", "SQLite", "Access"],
+  methodologies: ["UML", "CRUD", "POO", "Ingeniería de Software"],
+  tools: ["Visual Studio", "MatLab", "Blender", "Inkscape", "Excel Avanzado", "SpreadsheetLight"]
 };
 
 export const projects = [
